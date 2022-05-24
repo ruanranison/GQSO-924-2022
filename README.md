@@ -1,3 +1,3 @@
 # Projeto API Calculadora
 
-Esse projeto tem o objetivo de demonstrar a criação de um sistema que permita fazer cálculos, ou seja, uma calculadora, para a matéria de gestão de qualidade de software.
+Esse projeto tem o objetivo de demonstrar a criação de um sistema que permita fazer cálculos, ou seja, uma calculadora, para a matéria de gestão de qualidade de software. Uma api é um conjunto de definições e protocolos usado no desenvolvimento e na integração de aplicações. Às vezes, as APIs são descritas como um contrato entre um provedor e um usuário de informações, estabelecendo o conteúdo exigido pelo consumidor (a chamada) e o conteúdo exigido pelo produtor (a resposta). Por exemplo, o design da api de um serviço meteorológico pode especificar que o usuário forneça um CEP e o produtor responda em duas partes, a primeira contendo a temperatura mais elevada e a segunda com a temperatura mais baixa.  
