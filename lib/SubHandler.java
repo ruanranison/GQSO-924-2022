@@ -5,7 +5,7 @@ import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
-public class MultiHandler implements HttpHandler {
+public class SubHandler implements HttpHandler {
 
     public static final String PATH = "/sub";
 
