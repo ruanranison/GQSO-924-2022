@@ -12,7 +12,7 @@ public class Servidor {
         HttpServer server = HttpServer.create(bindAddr, TAMANHO_BACKLOG);
         server.setExecutor(Executors.newSingleThreadExecutor());
         server.createContext(IndexHandler.PATH, new IndexHandler());
-        server.createContext(SumHandler.PATH, new SumHandler());
+        server.createContext(SomaHandler.PATH, new SomaHandler());
         server.start();
         System.out.printf("Servidor ouvindo requisições na porta %s\n\n", server.getAddress().getPort());
     }

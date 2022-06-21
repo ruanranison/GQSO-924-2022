@@ -5,9 +5,9 @@ import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
-public class SumHandler implements HttpHandler {
+public class SomaHandler implements HttpHandler {
 
-    public static final String PATH = "/sum";
+    public static final String PATH = "/soma";
 
     @Override
     public void handle(HttpExchange conn) throws IOException {
@@ -34,7 +34,7 @@ public class SumHandler implements HttpHandler {
     byte[] calculateResponse(String parametro1, String parametro2) {
         double n1 = Double.parseDouble(parametro1);
         double n2 = Double.parseDouble(parametro2);
-        double sum = n1 + n2;
-        return Double.toString(sum).getBytes();
+        double soma = n1 + n2;
+        return Double.toString(soma).getBytes();
     }
 }
