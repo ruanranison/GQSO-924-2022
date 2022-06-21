@@ -7,7 +7,7 @@ import com.sun.net.httpserver.HttpHandler;
 
 public class MultiHandler implements HttpHandler {
 
-    public static final String PATH = "/sub";
+    public static final String PATH = "/multi";
 
     @Override
     public void handle(HttpExchange conn) throws IOException {
