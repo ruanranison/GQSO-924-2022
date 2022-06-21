@@ -12,6 +12,7 @@ public class Servidor {
         HttpServer server = HttpServer.create(bindAddr, TAMANHO_BACKLOG);
         server.setExecutor(Executors.newSingleThreadExecutor());
         server.createContext(IndexHandler.PATH, new IndexHandler());
+        server.createContext(DivHandler.PATH, new DivHandler());
         server.createContext(SomaHandler.PATH, new SomaHandler());
         server.createContext(MultiHandler.PATH, new MultiHandler());
         server.createContext(SubHandler.PATH, new SubHandler());
