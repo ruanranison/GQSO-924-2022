@@ -12,9 +12,9 @@ public class DivHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange conn) throws IOException {
         String[] partes = conn.getRequestURI().getPath().split("/");
-        String parametro1 = partes[2];
-        String parametro2 = partes[3];
-        byte[] result = calculateResponse(parametro1, parametro2);
+        String p1 = partes[2];
+        String p2 = partes[3];
+        byte[] result = calculateResponse(p1, p2);
         try {
             conn.sendResponseHeaders(HTTP_OK, result.length);
             Headers headers = conn.getResponseHeaders();
@@ -31,9 +31,9 @@ public class DivHandler implements HttpHandler {
         }
     }
 
-    byte[] calculateResponse(String parametro1, String parametro2) {
-        double n1 = Double.parseDouble(parametro1);
-        double n2 = Double.parseDouble(parametro2);
+    byte[] calculateResponse(String p1, String p2) {
+        double n1 = Double.parseDouble(p1);
+        double n2 = Double.parseDouble(p2);
         double div = n1 / n2;
         return Double.toString(div).getBytes();
     }
