@@ -1,13 +1,11 @@
-package com.danielfireman.ifal.calcapi;
-
+package app;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import org.junit.jupiter.api.Test;
-
 import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
+
 
 public class MultiTest {
     @Test
@@ -20,18 +18,10 @@ public class MultiTest {
     }
 
     @Test
-    public void multi_operador1String() {
+    public void multi_operadorString() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
-            router.get("/multi/aa", rsp -> {});
-        });
-    }
-
-    @Test
-    public void multi_operador2String() {
-        MockRouter router = new MockRouter(new App());
-        assertThrows(BadRequestException.class, () ->{
-            router.get("/multi/1/aa", rsp -> {});
+            router.get("/multi/a/1", rsp -> {});
         });
     }
 }
