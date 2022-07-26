@@ -5,13 +5,14 @@ import org.junit.jupiter.api.Test;
 import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
+ 
 
 public class DivTest {
     @Test
     public void div() {
         MockRouter router = new MockRouter(new App());
         router.get("/div/2/2", rsp -> {
-            assertEquals(4.0, rsp.value());
+            assertEquals(1.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
@@ -23,3 +24,4 @@ public class DivTest {
             router.get("/div/a/1", rsp -> {});
         });
     }
+}
