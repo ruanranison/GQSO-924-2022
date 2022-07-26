@@ -6,7 +6,6 @@ import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
 
-
 public class SubTest {
     @Test
     public void Sub() {
