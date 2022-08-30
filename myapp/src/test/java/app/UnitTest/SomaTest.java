@@ -1,26 +1,28 @@
-package app;
+package app.UnitTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
+
+import app.App;
 import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
 
-public class MultiTest {
+public class SomaTest {
     @Test
-    public void multi() {
+    public void soma() {
         MockRouter router = new MockRouter(new App());
-        router.get("/multi/2/2", rsp -> {
+        router.get("/soma/2/2", rsp -> {
             assertEquals(4.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
 
     @Test
-    public void multi_operadorString() {
+    public void soma_operadorString() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
-            router.get("/multi/a/1", rsp -> {});
+            router.get("/soma/a/1", rsp -> {});
         });
     }
 }

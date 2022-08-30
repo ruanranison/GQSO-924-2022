@@ -5,22 +5,22 @@ import org.junit.jupiter.api.Test;
 import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import io.jooby.exception.BadRequestException;
- 
-public class DivTest {
+
+public class SubTest {
     @Test
-    public void div() {
+    public void Sub() {
         MockRouter router = new MockRouter(new App());
-        router.get("/div/2/2", rsp -> {
-            assertEquals(1.0, rsp.value());
+        router.get("/sub/5/2", rsp -> {
+            assertEquals(3.0, rsp.value());
             assertEquals(StatusCode.OK, rsp.getStatusCode());
         });
     }
 
     @Test
-    public void div_operadorString() {
+    public void sub_operadorString() {
         MockRouter router = new MockRouter(new App());
         assertThrows(BadRequestException.class, () ->{
-            router.get("/div/a/1", rsp -> {});
+            router.get("/sub/a/1", rsp -> {});
         });
     }
 }

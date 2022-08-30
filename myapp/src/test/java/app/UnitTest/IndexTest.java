@@ -1,7 +1,9 @@
-package app;
+package app.UnitTest;
 import io.jooby.MockRouter;
 import io.jooby.StatusCode;
 import org.junit.jupiter.api.Test;
+
+import app.App;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
