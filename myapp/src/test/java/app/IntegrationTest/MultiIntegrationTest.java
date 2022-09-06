@@ -28,12 +28,12 @@ public class MultiIntegrationTest {
   @Test
   public void checaSucessoMulti(int serverPort) throws IOException {
     Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/multi/2/2")
+        .url("http://localhost:" + serverPort + "/multi/5/2")
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
       assertEquals(StatusCode.OK_CODE, rsp.code());
-      assertEquals("4.0", rsp.body().string());
+      assertEquals("10.0", rsp.body().string());
     }
   }
 }
