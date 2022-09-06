@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @JoobyTest(App.class)
 public class SumIntegrationTest {
-
   static OkHttpClient client = new OkHttpClient();
 
   @Test
