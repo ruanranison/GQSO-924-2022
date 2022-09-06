@@ -1,5 +1,4 @@
 package app.IntegrationTest;
-
 import io.jooby.JoobyTest;
 import io.jooby.StatusCode;
 import okhttp3.OkHttpClient;
