@@ -16,7 +16,7 @@ public class SumIntegrationTest {
   @Test
   public void checaErroSum(int serverPort) throws IOException {
     Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/sum/a/a")
+        .url("http://localhost:" + serverPort + "/soma/a/a")
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
@@ -27,7 +27,7 @@ public class SumIntegrationTest {
   @Test
   public void checaSucessoSum(int serverPort) throws IOException {
     Request req = new Request.Builder()
-        .url("http://localhost:" + serverPort + "/sum/10/7")
+        .url("http://localhost:" + serverPort + "/soma/10/7")
         .build();
 
     try (Response rsp = client.newCall(req).execute()) {
